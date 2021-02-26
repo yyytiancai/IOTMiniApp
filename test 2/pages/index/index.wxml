@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<!--
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+-->
+<swiper autoplay="1" circular="true" indicator-dots="3">
+    <swiper-item>
+        <image src="../../icon/11.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="../../icon/12.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="../../icon/13.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="../../icon/14.jpg" mode="widthFix"></image>
+    </swiper-item>
+</swiper>
+<!-- <SINPUT></SINPUT> -->
+<!--bind+Tab的 this.triggerEvent("itemchange",{index});的第一个参数名称-->
+<Tab tabs="{{tabs}}" binditemchange="itemChange">
+    <block wx:if="{{tabs[0].isactive}}">
+        <view class=" search_content">
+            <navigator class="search_item" url="/pages/detail/detail?id={{item.detail}}">选择蓝牙:HONOR BAND6-DD7 <checkbox value="" checked="" /></navigator>
+            <navigator class="search_item" url="/pages/detail/detail?id={{item.detail}}">选择蓝牙:BEOPLAY E8  ---------         <checkbox value="" checked="" /></navigator>
+            </view>
+        <!-- <text class="iconfont icon-zuijinyuedu"></text> -->
+    </block>
+    <block wx:elif="{{tabs[1].isactive}}">
+        <view class="floor" wx:for="{{floor}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+            <view class="floor_container">
+                <view class="floor_title">{{item1.name}}</view>
+                <navigator class="floor_item" wx:for="{{item1.contain}}" wx:for-item="item2" wx:for-index="index2" wx:key="id_sec">
+                    {{item2.name_sec}}</navigator>
+            </view>
+        </view>
+    </block>
+    <block wx:elif="{{tabs[2].isactive}}">
+
+        <cates cates="{{cates1}}" binditemchange="c_itemChange"></cates>
+        <!-- <cates cates="{{cates}}" binditemchange="c_itemChange"></cates> -->
+
+
+    </block>
+</Tab>
+<view class="write">
+    <view bindtap="to" class="to">每日监测</view>
+</view>

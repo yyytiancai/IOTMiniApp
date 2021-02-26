@@ -1,0 +1,43 @@
+<SINPUT>
+</SINPUT>
+<Tab tabs="{{tabs}}" binditemchange="itemChange">
+    <block wx:if="{{tabs[0].isactive}}">
+        <scroll-view scroll-y class="scroll" style="height:60%">
+            <view class="first_tab">
+                <view class="goods_item" >
+                    <!-- 左侧图片 -->
+                    <navigator class="goods_img_wrap" url="/pages/detail/detail?id={{item._id}}&user={{user}}&mylikes={{my_likes[index]}}&mycollects={{my_collects[index]}}" open-type="navigate">
+                        <image src="../../icon/tab41.png" mode="widthFix" style="max-height: 150px;min-height: 130px;">
+                        </image>
+                    </navigator>
+                    <!-- 右侧 -->
+                    <view class="goods_info_wrap">
+                        <view class="goods_name">刘xx</view>
+                        <view class="goods_price">地址： 上海市 普陀区</view>
+                        <view class="goods_price">开始治疗时间： 2020-12-15</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <text class="iconfont icon-zuijinyuedu"></text>
+    </block>
+    <block wx:if="{{tabs[1].isactive}}">
+        <scroll-view scroll-y class="scroll" style="height:60%">
+            <view class="first_tab">
+                <view class="goods_item" >
+                    <!-- 左侧图片 -->
+                    <navigator class="goods_img_wrap" url="/pages/detail/detail?id={{item._id}}&user={{user}}&mylikes={{my_likes[index]}}&mycollects={{my_collects[index]}}" open-type="navigate">
+                        <image src="../../icon/jiance1.jpg" mode="widthFix" style="max-height: 150px;min-height: 130px;">
+                        </image>
+                    </navigator>
+                    <!-- 右侧 -->
+                    <view class="goods_info_wrap">
+                        <view class="goods_name">刘xx</view>
+                        <view class="goods_price">测量时间： 2020-12-17 10:34</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <text class="iconfont icon-zuijinyuedu"></text>
+    </block>
+</Tab>

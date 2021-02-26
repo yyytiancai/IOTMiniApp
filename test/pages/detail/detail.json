@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "SHOWIMG":"../../component/SHOWIMG/SHOWIMG"
+    },
+    "navigationBarTitleText": "详情"
+}

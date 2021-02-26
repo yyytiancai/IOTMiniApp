@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/login/index",
+        "pages/index/index",
+        "pages/detail/detail",
+        "pages/goods_list/goods_list",
+        "pages/catelog/catelog",
+        
+        "pages/search/search",
+        "pages/search1/search1",
+        
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#3366CC",
+        "navigationBarTitleText": "loT监测系统",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#FFFFFF"
+    },
+    "tabBar": {
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "监测",
+                "iconPath": "icon/tab11.png",
+                "selectedIconPath": "icon/tab12.png"
+            },
+            {
+                "pagePath": "pages/catelog/catelog",
+                "text": "档案",
+                "iconPath": "icon/tab21.png",
+                "selectedIconPath": "icon/tab22.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "咨询",
+                "iconPath": "icon/tab31.png",
+                "selectedIconPath": "icon/tab32.png"
+            },
+            {
+                "pagePath": "pages/login/index",
+                "text": "个人中心",
+                "iconPath": "icon/tab41.png",
+                "selectedIconPath": "icon/tab42.png"
+            }
+        ],
+        "selectedColor": "#FFFFCC",
+        "color": "#FFFFCC",
+        "backgroundColor": "#3366CC"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

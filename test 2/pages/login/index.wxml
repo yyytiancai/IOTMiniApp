@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+</view>
+<Tab tabs="{{tabs}}" binditemchange="itemChange" calss="tab">
+    <block wx:if="{{tabs[0].isactive}}">
+        <scroll-view scroll-y class="scroll" style="height:60%">
+            <view class="first_tab">
+                <view class="goods_item" >
+                    <!-- 左侧图片 -->
+                    <navigator class="goods_img_wrap" url="/pages/detail/detail?id={{item._id}}&user={{user}}&mylikes={{my_likes[index]}}&mycollects={{my_collects[index]}}" open-type="navigate">
+                        <image src="../../icon/jiance1.jpg" mode="widthFix" style="max-height: 150px;min-height: 130px;">
+                        </image>
+                    </navigator>
+                    <!-- 右侧 -->
+                    <view class="goods_info_wrap">
+                        <view class="goods_name">刘xx</view>
+                        <view class="goods_price">测量时间：2020-12-15 8:30</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <text class="iconfont icon-zuijinyuedu"></text>
+    </block>
+    <block wx:elif="{{tabs[1].isactive}}">1</block>
+</Tab>
